@@ -43,8 +43,12 @@ h3{
 .underline{
     text-decoration: underline;
 }
+.center{
+    text-align: center;
+}
 .indent1{
     margin-left: 2em;
+    margin-top: 10px;
 }
 .command{
     font-family: monospace;
@@ -56,6 +60,9 @@ h3{
 ul{
     list-style: square;
     margin-top: 10px;
+}
+ul.disc{
+    list-style: disc;
 }
 ol{
     margin-top: 10px;
@@ -74,11 +81,14 @@ li{
     color: #c20000;
 }
 .lavel-crew{
-    color: #000fdf;
+    color: #00b4cc;
 }
 .lavel-both{
     color: #b100d4;
 }
 .lavel-neutral{
     color: #00831c;
+}
+.lavel-toc{
+    margin-top: 10px;
 }
