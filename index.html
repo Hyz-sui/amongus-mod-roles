@@ -22,7 +22,10 @@
                     <li>
                         <a href="#TownofHost">TownofHost</a>
                         <ol>
-                            <li><a href="#v1.4b#4で実装されている役職">v1.4b#4で実装されている役職</a></li>
+                            <li><a href="#インポスター陣営_toh">インポスター陣営</a></li>
+                            <li><a href="#クルー陣営_toh">クルー陣営</a></li>
+                            <li><a href="#両方に出現_toh">両方に出現</a></li>
+                            <li><a href="#第三陣営_toh">第三陣営</a></li>
                         </ol>
                     </li>
                     <li>
@@ -36,67 +39,58 @@
                     </li>
                 </ol>
             </div>
-            <h2 id="TownofHost">TownofHost</h2>
+            <h2 id="TownOfHost">TownOfHost</h2>
             <p>
-                置き換え先が同じ役職は同時に設定できません(バージョン1.4からは置き換え式ではなくなりこの問題は解消されます)。
+                役職名の前に<span class="star"></span>がついている役職はv2.0で追加される予定の役職です。
             </p>
+            <h3 id="インポスター陣営_toh">インポスター陣営</h3>
             <ul>
                 <li>
-                    <span class="bold lavel-impostor">狂人(Madmate)</span>
-                    <div class="indent1">エンジニアを置き換え。インポスター陣営。インポスターの勝利のために行動するクルーメイト。</div>
+                    <span class="bold lavel-impostor">マッドメイト(Madmate)</span>
+                    <div class="indent1">マッドメイトからはインポスターが誰なのかはわからず、インポスターからもマッドメイトが誰なのかはわからない。ベントに入れる。停電やコミュサボを直せない。</div>
                 </li>
                 <li>
-                    <span class="bold lavel-neutral">てるてる(Jester)</span>
-                    <div class="indent1">科学者を置き換え。第三陣営。会議で吊られたらその時点で単独勝利。</div>
+                    <span class="bold lavel-impostor">ヴァンパイア(Vampire)</span>
+                    <div class="indent1">キルボタンを押してから一定時間経ってキルが発生する。キルをしたときのテレポートは発生しない。キルボタンを押してから設定された時間が経つまでに会議が始まるとその瞬間にキルが発生する。ベイトをキルした場合のみ通常のキルとなり、強制的に通報させられる。</div>
                 </li>
                 <li>
-                    <span class="bold lavel-impostor">吸血鬼(Vampire)</span>
-                    <div class="indent1">インポスターを置き換え。インポスター陣営。キルボタンを押した10秒後に遅延してキルが発生する。ただし、相手がベイトだった場合は普通にキルしてしまう。</div>
+                    <span class="bold lavel-impostor">マフィア(Mafia)</span>
+                    <div class="indent1">初期状態でベントやサボタージュ、変身は可能だが、キルをすることはできない。マフィアではないインポスターが全員死亡すると、マフィアもキルができるようになる。キルができない状態でもキルボタンはあるが、キルをすることはできない。キルが可能になった後でも変身はできる。</div>
                 </li>
-                <li>
-                    <span class="bold lavel-crew">ベイト(Bait)</span>
-                    <div class="indent1">科学者を置き換え。クルー陣営。ベイトをキルしたインポスターに強制的にセルフレポートさせる。</div>
-                </li>
-                <li>
-                    <span class="bold lavel-neutral">テロリスト(Terrorist)</span>
-                    <div class="indent1">エンジニアを置き換え。第三陣営。タスクをすべて完了させてから何らかの要因で死亡すると勝利。ベントが使える。</div>
-                </li>
-                <li>
-                    <span class="bold lavel-impostor">相棒(Sidekick)/マフィア(Mafia)</span>
-                    <div class="indent1">シェイプシフターを置き換え。ベント、サボ、変身ができ、キルができない。サイドキック以外のインポスターが全滅するとキル能力が解禁される。v1.4からはマフィアに改称</div>
-                </li>
-            </ul>
-            <h3 id="v1.4b#4で実装されている役職">v1.4b#4で実装されている役職</h3>
-            <p>
-                更新時点での最新β版リリース、バージョン1.4ベータ#4で実装されている役職です。β版なので正式版と比べてバグが発生する可能性が高いこと、開発者に迷惑がかかるのでバグなどに関する愚痴を書き込んだりしないことを理解した上で<a href="https://github.com/tukasa0001/TownOfHost/releases/tag/v1.4b%234">使用</a>してください。
-            </p>
-            <p>
-                バウンティハンターのキル対象や魔女のキルモードは、MODを導入している人には画面の中央下部、MODを導入していない人には自分の名前の下に表示されます。
-            </p>
-            <div class="img">
-                <img src="img/bountytargetclient.png" alt="クライアントMODが導入されている場合、画面の中央下部に表示される" title="クライアントMODあり" width="100%">
-                <div class="caption">MOD導入者視点</div>
-            </div>
-            <div class="img">
-                <img src="img/bountytargetnoclient.png" alt="クライアントMODが導入されていない場合、自分の名前の下に表示される" title="クライアントMODなし" width="100%">
-                <div class="caption">MOD非導入者視点</div>
-            </div>
-            <ul>
                 <li>
                     <span class="bold lavel-impostor">バウンティハンター(BountyHunter)</span>
-                    <div class="indent1">ターゲットが設定され、そのターゲットをキルすると直後のキルクールが短くなる。</div>
+                    <div class="indent1"><span class="bold">v1.4:</span> 表示されたターゲットをキルした場合、次のキルクールが半分になる。ターゲットではないプレイヤーをキルした場合も、次のキルクールはそのまま維持される。<br/><span class="bold">v2.0:</span>  表示されたターゲットをキルした場合、次のキルクールが短くなる。ターゲットではないプレイヤーをキルした場合は、キルクールが伸びてしまう。また、設定でキルクールを 2.5 秒に設定する必要がある。ターゲットは一定時間ごとに変更される。</div>
                 </li>
                 <li>
                     <span class="bold lavel-impostor">魔女(Witch)</span>
-                    <div class="indent1">キルするごとにキル/スペル(魔術)のモードが切り替わり、スペルモードのときにキルボタンを押すとキルではなく対象に魔術をかける。魔術をかけられたプレイヤーはすぐには死なず、次の会議で名前の横に十字架が付いて表示される。その会議で魔女を吊ることができないと、対象は死亡する。</div>
+                    <div class="indent1">キルボタンを押すごとにキルモードとスペル(魔術)モードが入れ替わり、スペルモードの時にキルボタンを押すと対象に魔術をかけることができる。魔術をかけられたプレイヤーには会議で名前に十字架マークが付き、その会議で魔女を追放できなければ死亡してしまう。</div>
                 </li>
                 <li>
                     <span class="bold lavel-impostor">マッドガーディアン(MadGuardian)</span>
-                    <div class="indent1">狂人の一種。割り当てられたタスクを全て終わらせるとバリアを手に入れ、インポスターにはキルされなくなる。</div>
+                    <div class="indent1">狂人の一種。マッドガーディアンからはインポスターが誰なのかはわからず、インポスターからもマッドガーディアンが誰なのかはわからない。自身のタスクを全て完了させるとキルされなくなる。キルやサボタージュはできず、ベントに入ることもできない。</div>
                 </li>
                 <li>
-                    <span class="bold lavel-neutral">オポチュニスト(Opportunist)</span>
-                    <div class="indent1">試合終了時に生きていると追加勝利。</div>
+                    <span class="bold lavel-impostor star">シリアルキラー(SerialKiller)</span>
+                    <div class="indent1">キルクールが短いインポスター。その代わり、時間が来るまでにキルをしないと自爆してしまう。</div>
+                </li>
+                <li>
+                    <span class="bold lavel-impostor star">シェイプマスター(ShapeMaster)</span>
+                    <div class="indent1">変身後のクールダウンを無視し、再度変身することができるシェイプシフター。</div>
+                </li>
+                <li>
+                    <span class="bold lavel-impostor star">ウォーロック(Warlock)</span>
+                    <div class="indent1">シェイプシフター判定なので、変身ボタンが存在する。ウォーロックが変身をする前にキルをすると、その相手に呪いがかかる。その状態で変身を行うと、呪った人に一番近い人が死ぬ。呪いキルの成功または会議を挟むと呪いはリセットされる。</div>
+                </li>
+                <li>
+                    <span class="bold lavel-impostor star">マッドスニッチ(MadSnitch)/狂信者</span>
+                    <div class="indent1">狂人の一種。マッドスニッチからはインポスターが誰なのかはわからず、インポスターからもマッドスニッチが誰なのかはわからない。自身のタスクを一定数完了させると自分視点でインポスターの名前が赤色に変化する。ベントには入れない。</div>
+                </li>
+            </ul>
+            <h3 id="クルー陣営_toh">クルー陣営</h3>
+            <ul>
+                <li>
+                    <span class="bold lavel-crew">ベイト(Bait)</span>
+                    <div class="indent1">キルされたときに、自分をキルしたプレイヤーに強制的に自分の死体を通報させる。</div>
                 </li>
                 <li>
                     <span class="bold lavel-crew">メイヤー(Mayor)</span>
@@ -104,20 +98,77 @@
                 </li>
                 <li>
                     <span class="bold lavel-crew">サボタージュマスター(SabotageMaster)</span>
-                    <div class="indent1">設定した回数だけ簡単にサボタージュを直す能力を持つ。リアクター、O2、ミラのコミュサボは片方をアクティベートするだけで直せる。停電はどこかのスイッチを押すと一気に全部直る。設定によっては、1枚ドアを開けるとその部屋のドアが全部開く。</div>
+                    <div class="indent1">サボタージュを早く直すことができる。リアクター、O2、MIRAHQのコミュサボは片方を修理すれば両方直る。停電は1箇所のレバーに触れると全て直る。PolusやAirshipのドアを開けるとその部屋の全てのドアが開く(設定による)。</div>
                 </li>
                 <li>
                     <span class="bold lavel-crew">シェリフ(Sheriff)</span>
-                    <div class="indent1">人外をキルできるクルー。誤ってクルーをキルしようとすると自爆する。仕様上タスクがない。死亡すると毎会議後に自爆するのは仕様。</div>
+                    <div class="indent1">人外をキルすることができる。しかし、クルーメイトをキルした場合、自分が死亡してしまう。仕様上タスクがない。</div>
                 </li>
                 <li>
                     <span class="bold lavel-crew">スニッチ(Snitch)</span>
-                    <div class="indent1">タスクを終わらせると、スニッチ視点だけでインポスターの名前が赤く表示されるようになる。スニッチのタスクが残り1個になると、インポスター視点でスニッチの名前の横に星マークが表示されるようになってしまう。</div>
+                    <div class="indent1">タスクを完了させると、自分視点だけでインポスターの名前が赤く表示されるようになる。スニッチのタスクが少なくなると、インポスターは自分の名前に黄色い星が表示されることで通知を受け取り、さらにインポスター視点でスニッチの名前の横にも同じ星マークが表示されるようになってしまう。</div>
                 </li>
                 <div class="img">
                     <img src="img/snitch.png" alt="インポスター視点では自分とスニッチの名前に星マークが付く" title="インポスター視点" width="100%">
-                    <div class="caption">スニッチ通知を受け取ったインポスター視点</div>
+                    <div class="caption">スニッチ通知を受け取ったインポスター視点(v1.4で確認)</div>
                 </div>
+                <li>
+                    <span class="bold lavel-crew star">ライター(Lighter)</span>
+                    <div class="indent1">タスクを完了させると自分の視界が広がり、停電の影響を受けなくなる。</div>
+                </li>
+                <li>
+                    <span class="bold lavel-crew star">スピードブースター(SpeedBooster)</span>
+                    <div class="indent1">タスクを完了させると、生存しているランダムなプレイヤーの速度を上げる。</div>
+                </li>
+                <li>
+                    <span class="bold lavel-crew star">トラッパー(Trapper)</span>
+                    <div class="indent1">キルされると、キルした人を一時的に移動不可にする。</div>
+                </li>
+            </ul>
+            <h3 id="両方に出現_toh">両方に出現</h3>
+            <ul>
+                <li>
+                    <span class="bold lavel-both star">ウォッチャー(Watcher)</span>
+                    <div class="indent1">会議中に全員の投票先を見ることができる。インポスター陣営であるイビルウォッチャーになる確率を設定できる。</div>
+                </li>
+            </ul>
+            <h3 id="第三陣営_toh">第三陣営</h3>
+            <ul>
+                <li>
+                    <span class="bold lavel-neutral">ジェスター(Jester)</span>
+                    <div class="indent1">投票で追放されたときに単独勝利する。追放されずにゲームが終了するか、キルされると敗北となる。</div>
+                </li>
+                <li>
+                    <span class="bold lavel-neutral">テロリスト(Terrorist)</span>
+                    <div class="indent1">自身のタスクを全て完了させた状態で死亡したときに単独勝利する。タスクを完了させずに死亡したり、死亡しないまま試合が終了すると敗北となる。</div>
+                </li>
+                <li>
+                    <span class="bold lavel-neutral">オポチュニスト(Opportunist)</span>
+                    <div class="indent1">ゲーム終了時に生き残っていれば追加勝利となる(横取りしない)。タスクはない。</div>
+                </li>
+                <li>
+                    <span class="bold lavel-neutral star">アーソニスト(Arsonist)</span>
+                    <div class="indent1">キルボタンを押して一定時間近くにいると相手にオイルが塗れる。生存者全員にオイルを塗ると単独勝利する。</div>
+                </li>
+                <li>
+                    <span class="bold lavel-neutral star">シュレディンガーの猫(SchrodingerCat)</span>
+                    <div class="indent1">
+                        デフォルトでは勝利条件を持たず、条件を満たすと初めて勝利条件を持つ。
+                        <ul class="disc">
+                            <li>インポスターにキルされた →キルを防いでインポスター陣営となる</li>
+                            <li>シェリフにキルされた →キルを防いでクルー陣営となる</li>
+                            <li>第三陣営にキルされた →キルを防いで第三陣営となる</li>
+                            <li>追放された →役職が変化せず、そのまま勝利条件が変わらず死亡する</li>
+                            <li>ウォーロックの能力でキルされた →そのまま勝利条件が変わらず死亡する</li>
+                            <li>自殺系キル(ヴァンパイア除く)でキルされた →そのまま勝利条件が変わらず死亡する</li>
+                        </ul>
+                        タスクはない。
+                    </div>
+                </li>
+                <li>
+                    <span class="bold lavel-neutral star">エゴイスト(Egoist)</span>
+                    <div class="indent1">インポスターはエゴイストを認識している。エゴイストもインポスターを認識している。インポスターとエゴイストは切りあうことができない。他のインポスターが全滅した状態で、かつインポスターの勝利条件を達成した場合に勝利する。エゴイストが勝利するとインポスターは敗北となる。死亡してしまったり、他のインポスターが残っている状態でインポスター勝利をしてしまった場合、エゴイストは敗北となる。</div>
+                </li>
             </ul>
             <h2 id="TheOtherRolesGM">TheOtherRolesGM</h2>
             <p>
@@ -324,6 +375,9 @@
                     <div class="indent1">油ボタンを押しながら他のプレイヤーの近くにとどまることで、対象に油を塗ることができる。生存している全てのプレイヤーに油を塗ると、発火させることができ、単独勝利する。</div>
                 </li>
             </ul>
+            <div class="footer">
+                説明文の作成にあたり<a href="https://github.com/tukasa0001/TownOfHost">tukasa0001/TownOfHost</a>の<a href="https://github.com/tukasa0001/TownOfHost/blob/80cf17bf6f73ea5ce4a3e3a075fecd2f2e418ad6/README.md">readme</a>および<a href="https://github.com/tukasa0001/TownOfHost/blob/588426c4066d42a7363b00ddf144dd44b58e19ae/README.md">v2.0のreadme</a>，<a href="https://github.com/yukinogatari/TheOtherRoles-GM">yukinogatari/TheOtherRoles-GM</a>の<a href="https://github.com/yukinogatari/TheOtherRoles-GM/blob/gm-main/README.md">readme</a>から文面を一部改変して借用しています
+            </div>
         </div>
     </body>
 
