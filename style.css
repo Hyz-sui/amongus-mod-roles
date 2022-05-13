@@ -5,14 +5,14 @@
 body{
     font-family: '07ロゴたいぷゴシック7';
 }
-a{
+a, summary{
     text-decoration: none;
     color: #0047cc;
 }
 a:visited{
     color: #0047cc;
 }
-a:hover{
+a:hover, summary:hover{
     text-decoration: underline;
 }
 .content{
@@ -36,6 +36,9 @@ h2{
 h3{
     color: rgb(255, 0, 234);
     font-weight: normal;
+}
+summary{
+    cursor: pointer;
 }
 .bold{
     font-weight: bold;

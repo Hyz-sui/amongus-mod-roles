@@ -41,7 +41,7 @@
             </div>
             <h2 id="TownOfHost">TownOfHost</h2>
             <p>
-                役職名の前に<span class="star"></span>がついている役職はv2.0で追加される予定の役職です。
+                役職名の前に<span class="star"></span>がついている役職はv2.0で追加される予定の役職です(説明は暫定的なもの)。
             </p>
             <h3 id="インポスター陣営_toh">インポスター陣営</h3>
             <ul>
@@ -79,12 +79,28 @@
                 </li>
                 <li>
                     <span class="bold lavel-impostor star">ウォーロック(Warlock)</span>
-                    <div class="indent1">シェイプシフター判定なので、変身ボタンが存在する。ウォーロックが変身をする前にキルをすると、その相手に呪いがかかる。その状態で変身を行うと、呪った人に一番近い人が死ぬ。呪いキルの成功または会議を挟むと呪いはリセットされる。</div>
+                    <div class="indent1">ウォーロックが変身をする前にキルをすると、その相手に呪いがかかる。その状態で変身を行うと、呪った人に一番近い人が死ぬ。呪いキルの成功または会議を挟むと呪いはリセットされる。</div>
                 </li>
                 <li>
                     <span class="bold lavel-impostor star">マッドスニッチ(MadSnitch)/狂信者</span>
                     <div class="indent1">狂人の一種。マッドスニッチからはインポスターが誰なのかはわからず、インポスターからもマッドスニッチが誰なのかはわからない。自身のタスクを一定数完了させると自分視点でインポスターの名前が赤色に変化する。ベントには入れない。</div>
                 </li>
+                <li>
+                    <span class="bold lavel-impostor star">パペッティア(Puppeteer)</span>
+                    <div class="indent1">キルした対象に、対象が次に近づいたクルーをキルさせる。対象がキルした相手がキルされた瞬間に発動する能力を持っていた場合(ベイトなど？)、対象にその効果が反映される。普通のキルを行うことはできない。</div>
+                </li>
+                <li>
+                    <span class="bold lavel-impostor star">花火職人(FireWorks)</span>
+                    <div class="indent1">変身することで最大3個の花火を設置できる。すべての花火を設置し終え、最後のインポスターとなった時に変身すると、花火が一斉に起爆する。花火を設置し始めてから爆破するまでキルできない。自身が爆破に巻き込まれても全滅させることができた場合は勝利となる。</div>
+                </li>
+                <li>
+                    <span class="bold lavel-impostor star">スナイパー(Sniper)</span>
+                    <div class="indent1">遠距離射撃ができる。変身した地点から解除した地点への延長線上にいる対象をキルする。射線上のクルーには射撃音(守護天使のエフェクト？)が聞こえる。弾丸を打ち切るまで通常キルはできない。</div>
+                </li>
+                <div class="img">
+                    <a href="img/sniper_large.png" target="_blank"><img src="img/sniper.png" alt="スナイパーの射程" title="スナイパーの射程" width="100%"></a>
+                    <div class="caption">スナイパーの射撃(クリックで拡大)</div> <!-- 画像サイズを縮小！！！ -->
+                </div>
             </ul>
             <h3 id="クルー陣営_toh">クルー陣営</h3>
             <ul>
@@ -123,6 +139,14 @@
                 <li>
                     <span class="bold lavel-crew star">トラッパー(Trapper)</span>
                     <div class="indent1">キルされると、キルした人を一時的に移動不可にする。</div>
+                </li>
+                <li>
+                    <span class="bold lavel-crew star">ディクテーター(Dictator)</span>
+                    <div class="indent1">会議中に誰かに投票をすると、会議を強制終了させて投票先を追放する。投票したタイミングでディクテーターは死亡する。</div>
+                </li>
+                <li>
+                    <span class="bold lavel-crew star">ドクター(Doctor)</span>
+                    <div class="indent1">プレイヤーの死因を知ることができ、遠隔でバイタルをみることができる。</div>
                 </li>
             </ul>
             <h3 id="両方に出現_toh">両方に出現</h3>
@@ -168,6 +192,28 @@
                 <li>
                     <span class="bold lavel-neutral star">エゴイスト(Egoist)</span>
                     <div class="indent1">インポスターはエゴイストを認識している。エゴイストもインポスターを認識している。インポスターとエゴイストは切りあうことができない。他のインポスターが全滅した状態で、かつインポスターの勝利条件を達成した場合に勝利する。エゴイストが勝利するとインポスターは敗北となる。死亡してしまったり、他のインポスターが残っている状態でインポスター勝利をしてしまった場合、エゴイストは敗北となる。</div>
+                </li>
+                <li>
+                    <span class="bold lavel-neutral star">恋人(Lovers)</span>
+                    <div class="indent1">
+                        クルーのタスク勝利以外で恋人が2人とも生き残っている状態で試合が終了すると勝利。全プレイヤーの中から、本来の役職と重複して2人配役され、互いの名前の後ろにハートマークが付いて見える。クルー陣営のタスクを持つプレイヤーが恋人になった場合、タスクがなくなる。片方が死亡したらもう片方も死亡する。
+                        <details>
+                            <summary>役職重複例(クリックで表示):</summary>
+                            <ul class="disc">
+                                <li>テロリスト+恋人 - タスクを持つ。通常のテロリスト勝利も可能。</li>
+                                <li>マッドスニッチ(狂信者)+恋人 - 通常通り、タスクを完了させるとインポスターがわかる。</li>
+                                <li>スニッチ+恋人 - タスクを持たず、インポスターがわからない。</li>
+                                <li>シェリフ+恋人 - 通常通り人外を切れる。</li>
+                                <li>オポチュニスト+恋人 - 生き残れば勝利。</li>
+                                <li>ジェスター+恋人 - 自分が追放されればジェスターとして勝利。</li>
+                                <li>ベイト+恋人 - 恋人の相手がキルされた場合、通常通り後追い死亡するが、ベイト効果の通報は恋人の相手が行う。</li>
+                            </ul>
+                        </details>
+                    </div>
+                </li>
+                <li>
+                    <span class="bold lavel-neutral star">エクスキューショナー(Executioner)</span>
+                    <div class="indent1">ターゲットを追放すると単独勝利。ターゲットには名前にダイヤマークが付いて見える。ターゲットがキルされた場合は設定した役職に変化する。ターゲットがジェスターだった場合は2人で一緒に勝利する。</div>
                 </li>
             </ul>
             <h2 id="TheOtherRolesGM">TheOtherRolesGM</h2>
@@ -376,7 +422,7 @@
                 </li>
             </ul>
             <div class="footer">
-                説明文の作成にあたり<a href="https://github.com/tukasa0001/TownOfHost">tukasa0001/TownOfHost</a>の<a href="https://github.com/tukasa0001/TownOfHost/blob/80cf17bf6f73ea5ce4a3e3a075fecd2f2e418ad6/README.md">readme</a>および<a href="https://github.com/tukasa0001/TownOfHost/blob/588426c4066d42a7363b00ddf144dd44b58e19ae/README.md">v2.0のreadme</a>，<a href="https://github.com/yukinogatari/TheOtherRoles-GM">yukinogatari/TheOtherRoles-GM</a>の<a href="https://github.com/yukinogatari/TheOtherRoles-GM/blob/gm-main/README.md">readme</a>から文面を一部改変して借用しています
+                説明文の作成にあたり<a href="https://github.com/tukasa0001/TownOfHost">tukasa0001/TownOfHost</a>の<a href="https://github.com/tukasa0001/TownOfHost/blob/80cf17bf6f73ea5ce4a3e3a075fecd2f2e418ad6/README.md">readme</a>および<a href="https://github.com/tukasa0001/TownOfHost/blob/82232c157bacb7805377251950e8d3b159c7b60d/README.md">v2.0のreadme</a>，<a href="https://github.com/yukinogatari/TheOtherRoles-GM">yukinogatari/TheOtherRoles-GM</a>の<a href="https://github.com/yukinogatari/TheOtherRoles-GM/blob/gm-main/README.md">readme</a>から文面を一部改変して借用しています
             </div>
         </div>
     </body>
