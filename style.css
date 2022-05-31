@@ -37,6 +37,10 @@ h3{
     color: rgb(255, 0, 234);
     font-weight: normal;
 }
+h4{
+    color: rgb(255, 128, 0);
+    font-weight: normal;
+}
 summary{
     cursor: pointer;
 }
@@ -110,10 +114,6 @@ li{
 }
 .lavel-toc{
     margin-top: 10px;
-}
-.star::before{
-    content: '★';
-    color: gold;
 }
 .footer{
     background-color: rgb(0, 0, 109);
