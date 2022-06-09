@@ -1,6 +1,6 @@
 @font-face {
     font-family: '07ロゴたいぷゴシック7';
-    src: url('./ロゴたいぷゴシック.otf') format('opentype');
+    src: url('./ロゴたいぷゴシック.woff2') format('woff2');
 }
 body{
     font-family: '07ロゴたいぷゴシック7';
